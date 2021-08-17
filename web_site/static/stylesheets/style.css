@@ -1,0 +1,504 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    padding: 10px;
+    text-align: center;
+    background-image: url('galactic1.png');
+    color: #fff;
+    width: 100%;
+}
+
+#purchase {
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    background-color: #34495e;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+}
+
+#cartCount {
+    margin-left: 20px;
+}
+
+#cart {
+    background-color: #2c5781;
+    color: white;
+}
+
+.header h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+#index {
+    width: 330px;
+}
+
+.footer {
+    background-color: #34495e;
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+#contact {
+    color: white;
+}
+
+#indexPage {
+    position: relative;
+    top: 10%;
+    bottom: 10%;
+    left: 25%;
+    right: 25%;
+    text-align: center;
+    max-width: 50%;
+}
+
+#loginPage {
+    padding-top: 50px;
+    margin-left: calc((100vw - 330px) / 2);
+    position: relative;
+    text-align: center;
+    max-width: 330px;
+}
+
+#adminPage {
+    position: relative;
+    top: 10%;
+    bottom: 10%;
+    left: 25%;
+    text-align: center;
+    max-width: 50vw;
+}
+
+#signupPage {
+    padding-top: 50px;
+    margin-left: calc((100vw - 330px) / 2);
+    position: relative;
+    text-align: center;
+    max-width: 330px;
+}
+
+#logo {
+    border-style: solid;
+    border-color: black;
+    border-radius: 4px;
+}
+
+#login {
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+#signup {
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .item {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+        border: #34495e solid;
+        border-radius: 10px;
+    }
+}
+
+.item {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: #34495e solid;
+    border-radius: 10px;
+    max-width: 32%;
+}
+
+.item>div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.flex-container>h1 {
+    margin-top: 20px;
+}
+
+
+/*
+    Landing Page, Browse Products, Veiw Products
+*/
+
+#showcase {
+    background-image: url('galactic1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#showcase1 {
+    text-align: center;
+    color: #fff;
+    padding: 50px;
+}
+
+#showcase2 {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 30px 20px;
+    min-height: calc(100vh - 211px - 58px);
+}
+
+#showcase3 {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#showcase4 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#showcase5 {
+    background-color: gray;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#showcase3:last-child {
+    margin-bottom: 0;
+}
+
+#showcase3 p {
+    margin-top: 16px;
+    line-height: 24px;
+}
+
+.form-group .checkbox {
+    font-weight: 400;
+    width: 100px;
+}
+
+.shopping-cart {
+    padding-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.shopping-cart.dark {
+    background-color: #f6f6f6;
+}
+
+.shopping-cart .content {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+    background-color: white;
+}
+
+.shopping-cart .block-heading {
+    padding-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.shopping-cart .block-heading p {
+    text-align: center;
+    max-width: 420px;
+    margin: auto;
+    opacity: 0.7;
+}
+
+.shopping-cart .dark .block-heading p {
+    opacity: 0.8;
+}
+
+.shopping-cart .items {
+    margin: auto;
+}
+
+.shopping-cart .items .product {
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.shopping-cart .items .product .info {
+    padding-top: 0px;
+    text-align: center;
+}
+
+.shopping-cart .items .product .info .product-name {
+    font-weight: 600;
+}
+
+.shopping-cart .items .product .info .product-name .product-info {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.shopping-cart .items .product .info .product-name .product-info .value {
+    font-weight: 400;
+}
+
+.shopping-cart .items .product .info .quantity .quantity-input {
+    margin: auto;
+    width: 80px;
+}
+
+.shopping-cart .items .product .info .price .delete {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.shopping-cart .summary {
+    border-top: 2px solid #5ea4f3;
+    background-image: url('galactic1.png');
+    height: 100%;
+    padding: 30px;
+}
+
+.shopping-cart .summary h3 {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.shopping-cart .summary .summary-item:not(:last-of-type) {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shopping-cart .summary .text {
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+}
+
+.shopping-cart .summary .price {
+    font-size: 1em;
+    float: right;
+    color: white;
+}
+
+.shopping-cart .summary button {
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .shopping-cart .items .product .info {
+        padding-top: 25px;
+        text-align: left;
+    }
+    .shopping-cart .items .product .info .price {
+        font-weight: bold;
+        font-size: 22px;
+    }
+    .shopping-cart .items .product .info .delete {
+        text-align: center;
+    }
+    .shopping-cart .items .product .info .delete {
+        padding: 4px;
+        text-align: center;
+    }
+}
+
+.card {
+    margin: auto;
+    width: 600px;
+    padding: 3rem 3.5rem;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.mt-50 {
+    margin-top: 50px
+}
+
+.mb-50 {
+    margin-bottom: 50px
+}
+
+@media(max-width:767px) {
+    .card {
+        width: 90%;
+        padding: 1.5rem
+    }
+}
+
+@media(height:1366px) {
+    .card {
+        width: 90%;
+        padding: 8vh
+    }
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 2.5em
+}
+
+.nav {
+    display: flex
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    padding-inline-start: unset;
+    margin-bottom: 6vh
+}
+
+.nav li {
+    padding: 1rem
+}
+
+.nav li a {
+    color: black;
+    text-decoration: none
+}
+
+.active {
+    border-bottom: 2px solid black;
+    font-weight: bold
+}
+
+input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    width: 100%;
+    min-width: unset;
+    background-color: transparent;
+    border-color: transparent;
+    margin: 0
+}
+
+form a {
+    color: grey;
+    text-decoration: none;
+    font-size: 0.87rem;
+    font-weight: bold
+}
+
+form a:hover {
+    color: grey;
+    text-decoration: none
+}
+
+form .row {
+    margin: 0;
+    overflow: hidden
+}
+
+form .row-1 {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 0.5rem;
+    outline: none;
+    width: 100%;
+    min-width: unset;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgba(221, 228, 236, 0.459);
+    margin: 2vh 0;
+    overflow: hidden
+}
+
+form .row-2 {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0 0.8rem;
+}
+
+form .row .row-2 {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0 0.8rem;
+}
+
+form .row .col-2,
+.col-7,
+.col-3 {
+    display: flex;
+    align-items: center;
+    padding: 0 1vh
+}
+
+form .row .col-2 {
+    padding-right: 0
+}
+
+#card-header {
+    font-weight: bold;
+    font-size: 0.9rem
+}
+
+#card-inner {
+    font-size: 0.7rem;
+    color: gray
+}
+
+.three .col-7 {
+    padding-left: 0;
+    width: 100%;
+}
+
+.three {
+    overflow: hidden;
+    justify-content: space-between
+}
+
+.three .col-2 {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 0.5rem;
+    outline: none;
+    width: 100%;
+    min-width: unset;
+    border-radius: 5px;
+    background-color: white;
+    border-color: rgba(221, 228, 236, 0.459);
+    margin: 2vh 0;
+    overflow: hidden
+}
+
+.three .col-2 input {
+    font-size: 0.7rem;
+    margin-left: 2vh
+}

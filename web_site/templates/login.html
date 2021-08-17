@@ -1,0 +1,42 @@
+{% extends 'layout.html' %} {% block body %}
+<div id="loginPage" class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <img class="mb-4" src="/static/logo.svg" alt="Image-Not-Found" width="100" height="100" align="center">
+        <fieldset class="form-group">
+            <legend class="h3 border-bottom mb-4">Please Login</legend>
+            <div class="form-group">
+                {{ form.email.label(class="form-control-label") }} {% if form.email.errors %} {{ form.email(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.email.errors %}
+                    <span>{{ error }}</span> {% endfor %}
+                </div>
+                {% else %} {{ form.email(class="form-control form-control-lg") }} {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.password.label(class="form-control-label") }} {% if form.password.errors %} {{ form.password(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.password.errors %}
+                    <span>{{ error }}</span> {% endfor %}
+                </div>
+                {% else %} {{ form.password(class="form-control form-control-lg") }} {% endif %}
+            </div>
+        </fieldset>
+        <div class="checkbox mb-3">
+            <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+              Go to  <a class="ml-2" href="{{ url_for('sign_up') }}">sign up page</a>
+          </small>
+        </div>
+        <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+    </form>
+</div>
+
+{% endblock %}

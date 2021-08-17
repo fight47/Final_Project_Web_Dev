@@ -1,0 +1,7 @@
+venv
+web_site/__pycache__
+web_site/__pycache__/__init__.cpython-39.pyc
+web_site/static/images
+*.pyc
+docs/mytest
+web_site/site.db

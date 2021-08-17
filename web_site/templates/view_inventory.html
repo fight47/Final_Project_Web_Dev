@@ -1,0 +1,20 @@
+{% extends "layout.html" %} {% block body %}
+<h1 style="text-align:center;">View Inventory</h1>
+<div class=" flex-container "> {% for product in products.items %}
+    <div class="item ">
+        <img class="rounded-circle account-img " src="{{ url_for( 'static', filename='images/' + product.image_path) }} " width="200px " height="200px ">
+        <br>
+        <div>
+            <h2 class="mt-0 mb-1 ">{{ product.name }}</h2>
+
+            <div class="describe ">{{ product.description }}</div>
+            <p>{{ "$%.2f "|format(product.price) }}</p>
+            <p><a class="mr-2 " href="{{ url_for( 'admin_update_inventory', product_id=product.id) }} ">Click to Update</a></p>
+            <p><a class="mr-2 " href="{{ url_for( 'admin_delete_inventory', product_id=product.id) }} ">Delete from Inventory</a></p>
+        </div>
+    </div>
+    <br> {% endfor %}
+</div>
+{% for page_num in products.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %} {% if page_num %} {% if products.page == page_num %}
+<a class="btn btn-info mb-4 " href="{{ url_for( 'admin_view_inventory', page=page_num) }} ">{{ page_num }}</a> {% else %}
+<a class="btn btn-outline-info mb-4 " href="{{ url_for( 'admin_view_inventory', page=page_num) }} ">{{ page_num }}</a> {% endif %} {% else %} ... {% endif %} {%endfor%} {% endblock body %}

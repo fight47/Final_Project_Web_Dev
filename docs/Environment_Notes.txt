@@ -1,0 +1,19 @@
+Flask
+
+# Here are a couple of tutorials on how to use the venv environment system 
+# https://www.youtube.com/watch?v=Kg1Yvry_Ydk&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=25
+# https://www.youtube.com/watch?v=APOPm01BVrk&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=26
+# create a new environment
+python -m venv venv
+
+# activate the new environment
+venv\scripts\activate.bat
+
+# upgrade pip to the latest version
+python.exe -m pip install --upgrade pip
+
+# install the requirements
+# 
+# pip install -r requirements.txt 
+
+# then python run.py

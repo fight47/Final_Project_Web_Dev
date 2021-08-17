@@ -1,0 +1,24 @@
+{% extends 'layout.html' %} {% block body %}
+<h1 style="text-align:center;">Purchase</h1>
+<p style="text-align:center;">This is your purchase Page</p>
+<br>
+<div>
+    {%if items_in_cart != [] %}
+    <p style="text-align:center;">The following items were successfully purchased.</p>
+    <article id="showcase4">
+        <table>
+            <tr>
+                <td><i>Item(s)</i></td>
+            </tr>
+            {% for item in items_in_cart %}
+            <tr>
+                <td>
+                    <b>{{item.Products.name }}</b>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </article>
+</div>
+
+{%endif %} {% endblock %}

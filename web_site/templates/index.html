@@ -1,0 +1,13 @@
+{% extends 'layout.html' %} {% block body %}
+<div id="indexPage" class="mb-4">
+    <h1 class="h3 border-bottom mb-4">Welcome to our site!</h1>
+    <img class="mb-4" src="/static/logo.svg" alt="Image-Not-Found" width="200" height="200" align="center">
+    <p class="mt-5 mb-3 text-muted">Please select from the options below.</p>
+    <form id="signup" action="/sign_up">
+        <input class="btn btn-outline-info" id="index" type="submit" value="Sign Up">
+    </form><br>
+    <form id="login" action="/login">
+        <input class="btn btn-outline-info" id="index" type="submit" value="Login">
+    </form>
+    <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+</div> {% endblock %}
